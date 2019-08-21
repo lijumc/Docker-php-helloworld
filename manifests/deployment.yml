@@ -13,4 +13,4 @@ spec:
         - name: lijumcdockerphphelloworld 
           image: mycontainerregistryliju.azurecr.io/lijumcdockerphphelloworld 
           ports:
-          - containerPort: 8080
+          - containerPort: 80

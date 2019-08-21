@@ -9,11 +9,11 @@ spec:
       paths:
       - backend:
           serviceName: php-app
-          servicePort: 8080
+          servicePort: 80
   - host: fabrikam.net
     http:
       paths:
       - path:
         backend:
           serviceName: php-app
-          servicePort: 8080
+          servicePort: 80
