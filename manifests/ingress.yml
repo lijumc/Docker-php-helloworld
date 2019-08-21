@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+  - host: contoso.com
+    http:
+      paths:
+      - backend:
+          serviceName: lijumcdockerphphelloworld
+          servicePort: 8080
+  - host: fabrikam.net
+    http:
+      paths:
+      - path:
+        backend:
+          serviceName: lijumcdockerphphelloworld
+          servicePort: 8080
