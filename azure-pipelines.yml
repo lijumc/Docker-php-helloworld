@@ -70,7 +70,6 @@ stages:
               manifests: |
                 $(Pipeline.Workspace)/manifests/azure-lb.yml
                 $(Pipeline.Workspace)/manifests/php-app01.yml
-                $(Pipeline.Workspace)/manifests/nginx-ingress.yaml
               imagePullSecrets: |
                 $(imagePullSecret)
               containers: |
