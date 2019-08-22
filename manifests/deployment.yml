@@ -14,12 +14,3 @@ spec:
           image: mycontainerregistryliju.azurecr.io/lijumcdockerphphelloworld 
           ports:
           - containerPort: 80
-
-kind: Service
-metadata:
-    name: php-app01
-spec:
-    ports:
-    - port: 80
-    selector:
-        app: lijumcdockerphphelloworld
