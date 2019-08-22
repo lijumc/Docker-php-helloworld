@@ -1,13 +1,13 @@
 apiVersion : apps/v1beta1
 kind: Deployment
 metadata:
-  name: lijumcdockerphphelloworld 
+  name: php-app01
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: lijumcdockerphphelloworld 
+        app: php-app01
     spec:
       containers:
         - name: lijumcdockerphphelloworld 

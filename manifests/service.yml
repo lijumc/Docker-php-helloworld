@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-    name: lijumcdockerphphelloworld
+    name: azure-lb
 spec:
     type: LoadBalancer
     ports:
     - port: 80 
     selector:
-        app: lijumcdockerphphelloworld
+        app: php-app01
