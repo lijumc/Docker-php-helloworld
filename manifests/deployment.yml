@@ -12,7 +12,8 @@ spec:
 apiVersion : apps/v1beta1
 kind: Deployment
 metadata:
-  name:  php-app01 
+  name:  php-app01
+  namespace: ingress-basic
 spec:
   replicas: 1
   template:
