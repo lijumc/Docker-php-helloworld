@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: phphelloworld 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: phphelloworld 
+    spec:
+      containers:
+        - name: phphelloworld 
+          image: tkpoccontainerregistry.azurecr.io/phphelloworld 
+          ports:
+          - containerPort: 80
