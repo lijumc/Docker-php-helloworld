@@ -1,6 +1,28 @@
-- task: Docker@2
-  inputs:
-    containerRegistry: 'Liju Dockerhub'
-    repository: 'helloworldphp'
-    command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+trigger:
+- master
+
+resources:
+- repo: self
+
+variables:
+  # Agent VM image name
+  vmImageName: 'ubuntu-latest'
+
+stages:
+- stage: Build
+  displayName: Build stage
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: $(vmImageName)
+    steps:
+    - task: Docker@2
+      displayName: Build and push an image to container registry
+      inputs:
+        containerRegistry: 'Liju Dockerhub'
+        repository: 'helloworldphp'
+        command: 'buildAndPush'
+        Dockerfile: '**/Dockerfile'
+        tags: |
+          $(tag)
