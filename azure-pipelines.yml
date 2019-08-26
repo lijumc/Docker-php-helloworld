@@ -3,5 +3,5 @@ steps:
   displayName: Build and Push
   inputs:
     command: buildAndPush
-    containerRegistry: 'Liju Dockerhub'
-    repository: helloworldphp
+    containerRegistry: lijudockerhub
+    repository: docker-php-helloworld
